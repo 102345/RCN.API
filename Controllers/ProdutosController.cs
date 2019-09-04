@@ -33,6 +33,7 @@ namespace RCN.API.Controllers
             return Created(nameof(Criar),produto);
         }
 
+        
         [HttpGet]
         [ApiVersion("1.0")]
         [ResponseCache(Duration=30)]
@@ -40,6 +41,7 @@ namespace RCN.API.Controllers
         [Produces("application/json", "application/xml")]
         public IActionResult Obter()
         {   
+            //Teste de controle de versionamento
             var lista = Repositorio.Obter();
             return Ok(lista);
         }
